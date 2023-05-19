@@ -3,9 +3,20 @@ import "package:flutter/material.dart";
 import "gradient_container.dart";
 
 void main() {
-  runApp(
-    //runApp function is defined in material.dart file. runApp() function tell dart what to display on the screen
-    const MaterialApp(
+  runApp(const MyApp());
+  //runApp function is defined in material.dart file. runApp() function tell dart what to display on the screen
+
+  // add1(5);
+  // add2(b: 6);
+  // add3(a: 12, b: 13);
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
       home: Scaffold(
         body: GradientContainer(
           colors: [
@@ -14,14 +25,8 @@ void main() {
           ],
         ),
       ),
-    ),
-  );
-
-  // add1(5);
-  // add2(b: 6);
-  // add3(a: 12, b: 13);
-
-  /* Variables */
+    );
+  }
 }
 
 //flutterUI contain a tree of widgets that perform a set of taaks
